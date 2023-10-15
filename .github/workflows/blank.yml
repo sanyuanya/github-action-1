@@ -23,3 +23,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  build_window:
+      # The type of runner that the job will run on
+      runs-on: windows-latest
+
+      steps:
+        # Runs a single command using the runners shell
+        - name: Run a one-line script
+          run: |
+            echo "hello world"
+            Get-Date
