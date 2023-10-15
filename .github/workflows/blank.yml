@@ -23,9 +23,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          date1
   build_window:
       # The type of runner that the job will run on
       runs-on: windows-latest
+      if: ${{success()}}
+      needs: [build]
 
       steps:
         # Runs a single command using the runners shell
